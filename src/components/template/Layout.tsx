@@ -1,5 +1,5 @@
 import Cabecalho from "./Cabecalho";
-import Conteudo from "./conteudo";
+import Conteudo from "./Conteudo";
 import MenuLateral from "./MenuLateral";
 
 interface LayoutProps {

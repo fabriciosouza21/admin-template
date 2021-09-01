@@ -1,7 +1,16 @@
-export default function MenuLateral(props){
+import MenuItem from "./MenuItem";
+import {IconHome, IconNotify, IconSettings} from "../icons/Icons"
+
+
+export default function MenuLateral(){
     return (
         <aside>
-            <h1>menu</h1>
+            <ul>
+                <MenuItem url = "/" text = "home" icon = {IconHome} />
+                <MenuItem url = "/notification" text = "settings" icon = {IconSettings} />
+                <MenuItem url = "/settings" text = "notifications" icon = {IconNotify} />                
+            </ul>
+
         </aside>
     )
 }
