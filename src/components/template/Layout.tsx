@@ -2,20 +2,24 @@ import Cabecalho from "./Cabecalho";
 import Conteudo from "./conteudo";
 import MenuLateral from "./MenuLateral";
 
-interface LayoutProps{
+interface LayoutProps {
     titulo: string
     subtitulo: string
-    children? : any
+    children?: any
 }
 
-export default function Layout(props: LayoutProps){
+export default function Layout(props: LayoutProps) {
     return (
-        <div>
-            <MenuLateral/>
-            <Cabecalho titulo = {props.titulo} subtitulo = {props.subtitulo} />
-            <Conteudo>
-                {props.children}
-            </Conteudo>
+        <div className = {`flex h-screen w-screen`}>
+            <MenuLateral />
+            <div className={
+                `flex flex-col w-full  bg-gray-400`}>
+                <Cabecalho titulo={props.titulo} subtitulo={props.subtitulo} />
+                <Conteudo>
+                    {props.children}
+                </Conteudo>
+            </div>
+
         </div>
     )
 }
